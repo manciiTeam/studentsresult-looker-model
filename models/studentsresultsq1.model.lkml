@@ -10,9 +10,11 @@ datagroup: studentsresultsq1_default_datagroup {
 
 persist_with: studentsresultsq1_default_datagroup
 
+explore: contact_test_v1 {}
+explore: test_answer_v1 {}
 explore: academic_history {
   join: profiles {
-    type: left_outer 
+    type: left_outer
     sql_on: ${academic_history.profile_id} = ${profiles.id} ;;
     relationship: many_to_one
   }
@@ -20,13 +22,13 @@ explore: academic_history {
 
 explore: academic_product {
   join: branch {
-    type: left_outer 
+    type: left_outer
     sql_on: ${academic_product.branch_id} = ${branch.id} ;;
     relationship: many_to_one
   }
 
   join: address {
-    type: left_outer 
+    type: left_outer
     sql_on: ${branch.address_id} = ${address.id} ;;
     relationship: many_to_one
   }
@@ -34,13 +36,13 @@ explore: academic_product {
 
 explore: acreditation {
   join: branch {
-    type: left_outer 
+    type: left_outer
     sql_on: ${acreditation.branch_id} = ${branch.id} ;;
     relationship: many_to_one
   }
 
   join: address {
-    type: left_outer 
+    type: left_outer
     sql_on: ${branch.address_id} = ${address.id} ;;
     relationship: many_to_one
   }
@@ -52,7 +54,7 @@ explore: applicant_criteria {}
 
 explore: attendent {
   join: profiles {
-    type: left_outer 
+    type: left_outer
     sql_on: ${attendent.profile_id} = ${profiles.id} ;;
     relationship: many_to_one
   }
@@ -60,7 +62,7 @@ explore: attendent {
 
 explore: branch {
   join: address {
-    type: left_outer 
+    type: left_outer
     sql_on: ${branch.address_id} = ${address.id} ;;
     relationship: many_to_one
   }
@@ -72,7 +74,7 @@ explore: educational_institution {}
 
 explore: emotional_inteligence_info {
   join: profiles {
-    type: left_outer 
+    type: left_outer
     sql_on: ${emotional_inteligence_info.profile_id} = ${profiles.id} ;;
     relationship: many_to_one
   }
@@ -80,7 +82,7 @@ explore: emotional_inteligence_info {
 
 explore: executive_functions {
   join: profiles {
-    type: left_outer 
+    type: left_outer
     sql_on: ${executive_functions.profile_id} = ${profiles.id} ;;
     relationship: many_to_one
   }
@@ -92,7 +94,7 @@ explore: indicators {}
 
 explore: indicators_registers {
   join: indicators {
-    type: left_outer 
+    type: left_outer
     sql_on: ${indicators_registers.indicator_id} = ${indicators.id} ;;
     relationship: many_to_one
   }
@@ -104,7 +106,7 @@ explore: pei {}
 
 explore: pedagogical_models {
   join: profiles {
-    type: left_outer 
+    type: left_outer
     sql_on: ${pedagogical_models.profile_id} = ${profiles.id} ;;
     relationship: many_to_one
   }
@@ -112,7 +114,7 @@ explore: pedagogical_models {
 
 explore: personality_traits {
   join: profiles {
-    type: left_outer 
+    type: left_outer
     sql_on: ${personality_traits.profile_id} = ${profiles.id} ;;
     relationship: many_to_one
   }
@@ -120,7 +122,7 @@ explore: personality_traits {
 
 explore: preferences {
   join: profiles {
-    type: left_outer 
+    type: left_outer
     sql_on: ${preferences.profile_id} = ${profiles.id} ;;
     relationship: many_to_one
   }
@@ -130,7 +132,7 @@ explore: profiles {}
 
 explore: profiles_criteria {
   join: profiles {
-    type: left_outer 
+    type: left_outer
     sql_on: ${profiles_criteria.profile_id} = ${profiles.id} ;;
     relationship: many_to_one
   }
@@ -142,7 +144,7 @@ explore: skills {}
 
 explore: socio_demographic_info {
   join: profiles {
-    type: left_outer 
+    type: left_outer
     sql_on: ${socio_demographic_info.profile_id} = ${profiles.id} ;;
     relationship: many_to_one
   }
@@ -150,9 +152,8 @@ explore: socio_demographic_info {
 
 explore: socioeconomic_info {
   join: profiles {
-    type: left_outer 
+    type: left_outer
     sql_on: ${socioeconomic_info.profile_id} = ${profiles.id} ;;
     relationship: many_to_one
   }
 }
-
