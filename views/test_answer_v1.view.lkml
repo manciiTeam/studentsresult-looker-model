@@ -618,4 +618,233 @@ view: test_answer_v1 {
     sql: CASE WHEN ${p9func} = "a" THEN 1 ELSE 0 END ;;
   }
 
+  dimension: extroversion_p1 {
+    type: string
+    sql: CASE
+      WHEN ${p1personalidad}="a" then "Alto"
+      when ${p1personalidad}="b" then "Medio"
+      when ${p1personalidad}="c" then "Bajo"
+      else "otro"
+      END ;;
+  }
+
+  dimension: amabilidad_p2 {
+    type: string
+    sql: CASE
+      WHEN ${p2personalidad} = "a" THEN "Alto"
+      when ${p2personalidad} = "b" THEN "Medio"
+      when ${p2personalidad} = "c" THEN "Bajo"
+      else "otro"
+      END ;;
+  }
+
+  dimension: conciencia_p4 {
+    type: string
+    sql: CASE
+      WHEN ${p4personalidad} = "a" THEN "Alto"
+      when ${p4personalidad} = "b" then "Medio"
+      when ${p4personalidad} = "c" then "Bajo"
+      else "otro"
+    END ;;
+  }
+
+  dimension: apertura_experiencia_p5 {
+    type: string
+    sql: CASE
+      WHEN ${p5personalidad} = "a" THEN "Alto"
+      when ${p5personalidad} = "b" then "Medio"
+      when ${p5personalidad} = "c" then "Bajo"
+      else "otro"
+    END ;;
+  }
+
+  dimension: inteligencia_linguistica_p1 {
+    type: string
+    sql: CASE
+      WHEN ${p1inteligencia} = "a" THEN "Alto"
+      when ${p1inteligencia} = "b" then "Medio"
+      when ${p1inteligencia} = "c" then "Bajo"
+      else "otro"
+    END ;;
+  }
+
+  dimension: inteligencia_logico_matematica_p2 {
+    type: string
+    sql: CASE
+      WHEN ${p2inteligencia} = "a" THEN "Alto"
+      when ${p2inteligencia} = "b" then "Medio"
+      when ${p2inteligencia} = "c" then "Bajo"
+      else "otro"
+    END ;;
+  }
+
+  dimension: inteligencia_espacial_p3 {
+    type: string
+    sql: CASE
+      WHEN ${p3inteligencia} = "a" THEN "Alto"
+      when ${p3inteligencia} = "b" then "Medio"
+      when ${p3inteligencia} = "c" then "Bajo"
+      else "otro"
+    END ;;
+  }
+
+  dimension: inteligencia_musical_p4 {
+    type: string
+    sql: CASE
+      WHEN ${p4inteligencia} = "a" THEN "Alto"
+      when ${p4inteligencia} = "b" then "Medio"
+      when ${p4inteligencia} = "c" then "Bajo"
+      else "otro"
+    END ;;
+  }
+
+  dimension: inteligencia_corporal_kinestesica_p5 {
+    type: string
+    sql: CASE
+      WHEN ${p5inteligencia} = "a" THEN "Alto"
+      when ${p5inteligencia} = "b" then "Medio"
+      when ${p5inteligencia} = "c" then "Bajo"
+      else "otro"
+    END ;;
+  }
+
+  dimension: inteligencia_interpersonal_p6 {
+    type: string
+    sql: CASE
+      WHEN ${p6inteligencia} = "a" THEN "Alto"
+      when ${p6inteligencia} = "b" then "Medio"
+      when ${p6inteligencia} = "c" then "Bajo"
+      else "otro"
+    END ;;
+  }
+
+  dimension: inteligencia_intrapersonal_p7 {
+    type: string
+    sql: CASE
+      WHEN ${p7inteligencia} = "a" THEN "Alto"
+      when ${p7inteligencia} = "b" then "Medio"
+      when ${p7inteligencia} = "c" then "Bajo"
+      else "otro"
+    END ;;
+  }
+
+  dimension: inteligencia_naturalista_p8 {
+    type: string
+    sql: CASE
+      WHEN ${p8inteligencia} = "a" THEN "Alto"
+      when ${p8inteligencia} = "b" then "Medio"
+      when ${p8inteligencia} = "c" then "Bajo"
+      else "otro"
+    END ;;
+  }
+
+  dimension: inteligencia_existencial_filosofica_p9 {
+    type: string
+    sql: CASE
+      WHEN ${p9inteligencia} = "a" THEN "Alto"
+      when ${p9inteligencia} = "b" then "Medio"
+      when ${p9inteligencia} = "c" then "Bajo"
+      else "otro"
+    END ;;
+  }
+
+  dimension: inhibicion_p1 {
+    type: string
+    sql: CASE
+      WHEN ${p1func} = "a" THEN "Alto"
+      when ${p1func} = "b" then "Medio"
+      when ${p1func} = "c" then "Bajo"
+      else "otro"
+    END ;;
+  }
+
+  dimension: flexibilidad_cognitiva_p2 {
+    type: string
+    sql: CASE
+      WHEN ${p2func} = "a" THEN "Alto"
+      when ${p2func} = "b" then "Medio"
+      when ${p2func} = "c" then "Bajo"
+      else "otro"
+    END ;;
+  }
+
+  dimension: memoria_trabajo_p3 {
+    type: string
+    sql: CASE
+      WHEN ${p3func} = "a" THEN "Alto"
+      when ${p3func} = "b" then "Medio"
+      when ${p3func} = "c" then "Bajo"
+      else "otro"
+    END ;;
+  }
+
+  dimension: planificacion_organizacion_p4 {
+    type: string
+    sql: CASE
+      WHEN ${p4func} = "a" THEN "Alto"
+      when ${p4func} = "b" then "Medio"
+      when ${p4func} = "c" then "Bajo"
+      else "otro"
+    END ;;
+  }
+
+  dimension: razonamiento_abstracto_p5 {
+    type: string
+    sql: CASE
+      WHEN ${p5func} = "a" THEN "Alto"
+      when ${p5func} = "b" then "Medio"
+      when ${p5func} = "c" then "Bajo"
+      else "otro"
+    END ;;
+  }
+
+  dimension: toma_decisiones_p6 {
+    type: string
+    sql: CASE
+      WHEN ${p6func} = "a" THEN "Alto"
+      when ${p6func} = "b" then "Medio"
+      when ${p6func} = "c" then "Bajo"
+      else "otro"
+    END ;;
+  }
+
+  dimension: autoconciencia_p7 {
+    type: string
+    sql: CASE
+      WHEN ${p7func} = "a" THEN "Alto"
+      when ${p7func} = "b" then "Medio"
+      when ${p7func} = "c" then "Bajo"
+      else "otro"
+    END ;;
+  }
+
+  dimension: establecimiento_metas_perseverancia_p8 {
+    type: string
+    sql: CASE
+      WHEN ${p8func} = "a" THEN "Alto"
+      when ${p8func} = "b" then "Medio"
+      when ${p8func} = "c" then "Bajo"
+      else "otro"
+    END ;;
+  }
+
+  dimension: regulacion_emocional_p9 {
+    type: string
+    sql: CASE
+      WHEN ${p9func} = "a" THEN "Alto"
+      when ${p9func} = "b" then "Medio"
+      when ${p9func} = "c" then "Bajo"
+      else "otro"
+    END ;;
+  }
+
+  dimension: metacognicion_p10 {
+    type: string
+    sql: CASE
+      WHEN ${p10func} = "a" THEN "Alto"
+      when ${p10func} = "b" then "Medio"
+      when ${p10func} = "c" then "Bajo"
+      else "otro"
+    END ;;
+  }
 }

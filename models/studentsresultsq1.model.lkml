@@ -10,6 +10,16 @@ datagroup: studentsresultsq1_default_datagroup {
 
 persist_with: studentsresultsq1_default_datagroup
 
+explore: test_answer_v1 {
+    join: contact_test_v1 {
+      type: inner
+      sql_on: ${test_answer_v1.id}._id} = ${contact_test_v1.id} ;;
+      relationship: one_to_many
+    }
+}
+
+explore: contact_test_v1 {}
+
 explore: academic_history {
   join: profiles {
     type: left_outer
@@ -47,8 +57,7 @@ explore: acreditation {
 }
 
 explore: address {}
-explore: contact_test_v1 {}
-explore: test_answer_v1 {}
+
 explore: applicant_criteria {}
 
 explore: attendent {
