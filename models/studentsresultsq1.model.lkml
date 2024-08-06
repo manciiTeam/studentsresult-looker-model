@@ -10,7 +10,13 @@ datagroup: studentsresultsq1_default_datagroup {
 
 persist_with: studentsresultsq1_default_datagroup
 
-explore: test_answer_v1 {}
+explore: test_answer_v1 {
+  join: contact_test_v1 {
+    type: left_outer
+    sql_on: ${test_answer_v1.id} = ${contact_test_v1.id} ;;
+    relationship: many_to_one
+  }
+}
 
 explore: contact_test_v1 {}
 
