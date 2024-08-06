@@ -10,8 +10,10 @@ datagroup: studentsresultsq1_default_datagroup {
 
 persist_with: studentsresultsq1_default_datagroup
 
-explore: contact_test_v1 {}
 explore: test_answer_v1 {}
+
+explore: contact_test_v1 {}
+
 explore: academic_history {
   join: profiles {
     type: left_outer
