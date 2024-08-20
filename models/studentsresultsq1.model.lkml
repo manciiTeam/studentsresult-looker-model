@@ -10,10 +10,12 @@ datagroup: studentsresultsq1_default_datagroup {
 
 persist_with: studentsresultsq1_default_datagroup
 
+explore: queryjuan {}
+
 explore: test_answer_v1 {
     join: contact_test_v1 {
       type: inner
-      sql_on: ${test_answer_v1.id}._id} = ${contact_test_v1.id} ;;
+      sql_on: ${test_answer_v1.id} = ${contact_test_v1.id} ;;
       relationship: one_to_many
     }
 }
