@@ -11,6 +11,7 @@ datagroup: studentsresultsq1_default_datagroup {
 persist_with: studentsresultsq1_default_datagroup
 
 explore: queryjuan {}
+explore: viewjuan {}
 
 explore: test_answer_v1 {
     join: contact_test_v1 {
