@@ -57,6 +57,7 @@ view: academic_history {
     sql: ${TABLE}.startYear ;;
   }
   measure: count {
+    label: "count_academic_history"
     type: count
     drill_fields: [id, profiles.first_name, profiles.id, profiles.last_name]
   }
